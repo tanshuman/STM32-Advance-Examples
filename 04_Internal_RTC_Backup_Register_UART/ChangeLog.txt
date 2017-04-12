@@ -1,0 +1,17 @@
+1. Enable internal RTC and Send Time after every 1 sec to UART.
+2. Check a flag in EEPROM to verify clock is set or not.
+
+----------------------------------------------20-10-2016-------------------------------------------------
+1. Enabled RTC clock, with power backup feature.
+2. Added library - RTC, PWR, BKP.
+3. Created manual_config files for user defined functions.
+4. LED will blink in every one second. 
+5. Read RTC_Configuration() and NVIC_IRQChannel in NVIC_Configuration() in manual configuration.
+6. Read void RTC_IRQHandler(void) for interrupt details.
+
+
+
+
+
+
+
