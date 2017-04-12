@@ -1,0 +1,396 @@
+###############################################################################
+#
+# IAR ELF Linker V7.60.2.11341/W32 for ARM                20/Dec/2016  16:50:00
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Exe\fram_dma_uart.out
+#    Map file     =  
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\List\fram_dma_uart.map
+#    Command line =  
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\i2c_user.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\main.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\startup_stm32f0xx.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_adc.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_dma.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_gpio.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_i2c.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_misc.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_rcc.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\stm32f0xx_usart.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\system_stm32f0xx.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\uart_user.o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj\user_config.o
+#        -o
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Exe\fram_dma_uart.out
+#        --map
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\List\fram_dma_uart.map
+#        --config
+#        C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\stm32f0xx_flash.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20001fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section             Kind        Address    Size  Object
+  -------             ----        -------    ----  ------
+"A1":                                        0xc0
+  .intvec             ro code  0x08000000    0xc0  startup_stm32f0xx.o [1]
+                             - 0x080000c0    0xc0
+
+"P1":                                      0x2419
+  .text               ro code  0x080000c0   0xd1e  xprintflarge_nomb.o [3]
+  .text               ro code  0x08000dde    0x14  strchr.o [5]
+  .text               ro code  0x08000df2    0x10  strlen.o [5]
+  .text               ro code  0x08000e02    0x18  memchr.o [5]
+  .text               ro code  0x08000e1a    0x6a  I64DivMod.o [5]
+  .text               ro code  0x08000e84    0x5c  ABImemcpy.o [5]
+  .text               ro code  0x08000ee0    0xe0  I32DivModFast.o [5]
+  .text               ro code  0x08000fc0    0x32  DblCmpLe.o [4]
+  .text               ro code  0x08000ff2   0x184  DblMul.o [4]
+  .text               ro code  0x08001176    0xc2  DblDiv.o [4]
+  .text               ro code  0x08001238    0x2e  DblToI32.o [4]
+  .text               ro code  0x08001266     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08001268    0x34  I32ToDbl.o [4]
+  .text               ro code  0x0800129c   0x1a8  DblAddSub.o [4]
+  .text               ro code  0x08001444    0x68  localeconv.o [3]
+  .text               ro code  0x080014ac    0x20  div.o [3]
+  .text               ro code  0x080014cc     0x2  I64DivZer.o [5]
+  .text               ro code  0x080014ce     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x080014d0     0x2  IntDivZer.o [5]
+  .text               ro code  0x080014d2     0x2  xtls.o [3]
+  .text               ro code  0x080014d4   0x290  stm32f0xx_rcc.o [1]
+  .text               ro code  0x08001764   0x1f4  i2c_user.o [1]
+  .text               ro code  0x08001958   0x100  stm32f0xx_i2c.o [1]
+  .text               ro code  0x08001a58   0x190  user_config.o [1]
+  .text               ro code  0x08001be8    0xfc  stm32f0xx_gpio.o [1]
+  .text               ro code  0x08001ce4   0x164  stm32f0xx_usart.o [1]
+  .text               ro code  0x08001e48    0xac  stm32f0xx_adc.o [1]
+  .text               ro code  0x08001ef4   0x164  main.o [1]
+  .text               ro code  0x08002058    0x20  FltCmpEq.o [4]
+  .text               ro code  0x08002078    0x62  DblToFlt.o [4]
+  .text               ro code  0x080020da     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x080020dc    0x32  FltToDbl.o [4]
+  .text               ro code  0x0800210e     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002110    0x24  printf.o [3]
+  .text               ro code  0x08002134   0x164  system_stm32f0xx.o [1]
+  .text               ro code  0x08002298    0x3c  startup_stm32f0xx.o [1]
+  .text               ro code  0x080022d4    0x3c  zero_init3.o [5]
+  .text               ro code  0x08002310    0x3c  packbits_init_single.o [5]
+  .text               ro code  0x0800234c    0x28  data_init.o [5]
+  .rodata             const    0x08002374    0x24  main.o [1]
+  .text               ro code  0x08002398    0x24  uart_user.o [1]
+  .iar.init_table     const    0x080023bc    0x20  - Linker created -
+  .text               ro code  0x080023dc    0x1a  cmain.o [5]
+  .text               ro code  0x080023f6     0x4  low_level_init.o [3]
+  .text               ro code  0x080023fa     0x8  exit.o [3]
+  .text               ro code  0x08002402     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002404     0xa  cexit.o [5]
+  .text               ro code  0x0800240e     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002410    0x14  exit.o [6]
+  .text               ro code  0x08002424    0x16  xprout.o [3]
+  .text               ro code  0x0800243a     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800243c    0x10  putchar.o [3]
+  .text               ro code  0x0800244c     0xc  cstartup_M.o [5]
+  .rodata             const    0x08002458     0x8  main.o [1]
+  .rodata             const    0x08002460     0x8  xprintflarge_nomb.o [3]
+  .text               ro code  0x08002468     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800246a     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800246c     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800246e     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002470     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002472     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002474     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002476     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002478     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800247a     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800247c     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800247e     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002480     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002482     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002484     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002486     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002488     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800248a     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800248c     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800248e     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002490     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002492     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002494     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002496     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x08002498     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800249a     0x2  startup_stm32f0xx.o [1]
+  .text               ro code  0x0800249c     0x2  startup_stm32f0xx.o [1]
+  .rodata             const    0x0800249e     0x0  zero_init3.o [5]
+  .rodata             const    0x0800249e     0x0  packbits_init_single.o [5]
+  Initializer bytes   const    0x0800249e    0x3b  <for P2-1>
+                             - 0x080024d9  0x2419
+
+"P2", part 1 of 3:                           0xd9
+  P2-1                         0x20000000    0xd9  <Init block>
+    .data             inited   0x20000000    0x10  stm32f0xx_rcc.o [1]
+    .data             inited   0x20000010    0x40  xfiles.o [3]
+    __DLIB_PERTHREAD  inited   0x20000050    0x88  localeconv.o [3]
+    .data             inited   0x200000d8     0x1  main.o [1]
+                             - 0x200000d9    0xd9
+
+"P2", part 2 of 3:                          0x400
+  CSTACK                       0x200000e0   0x400  <Block>
+    CSTACK            uninit   0x200000e0   0x400  <Block tail>
+                             - 0x200004e0   0x400
+
+"P2", part 3 of 3:                           0x5c
+  .bss                zero     0x200004e0    0x50  xfiles.o [3]
+  .bss                zero     0x20000530     0x4  main.o [1]
+  .bss                zero     0x20000534     0x4  main.o [1]
+  .bss                zero     0x20000538     0x1  main.o [1]
+                             - 0x20000539    0x59
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x59:
+          0x200004e0  0x59
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x3b (27% of destination):
+          0x0800249e  0x3b
+    1 destination range, total size 0xd9:
+          0x20000000  0xd9
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj: [1]
+    i2c_user.o                  500
+    main.o                      356       45       10
+    startup_stm32f0xx.o         320
+    stm32f0xx_adc.o             172
+    stm32f0xx_gpio.o            252
+    stm32f0xx_i2c.o             256
+    stm32f0xx_rcc.o             656        4       16
+    stm32f0xx_usart.o           356
+    system_stm32f0xx.o          356
+    uart_user.o                  36
+    user_config.o               400
+    -------------------------------------------------
+    Total:                    3 660       49       26
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl6M_tlf.a: [3]
+    div.o                        32
+    exit.o                        8
+    localeconv.o                104       37      136
+    low_level_init.o              4
+    printf.o                     36
+    putchar.o                    16
+    xfiles.o                              17      144
+    xprintflarge_nomb.o       3 358        8
+    xprout.o                     22
+    xtls.o                        2
+    -------------------------------------------------
+    Total:                    3 582       62      280
+
+m6M_tl.a: [4]
+    DblAddSub.o                 424
+    DblCmpLe.o                   50
+    DblDiv.o                    194
+    DblMul.o                    388
+    DblToFlt.o                   98
+    DblToI32.o                   46
+    FltCmpEq.o                   32
+    FltToDbl.o                   50
+    I32ToDbl.o                   52
+    -------------------------------------------------
+    Total:                    1 334
+
+rt6M_tl.a: [5]
+    ABImemcpy.o                  92
+    I32DivModFast.o             224
+    I64DivMod.o                 106
+    I64DivZer.o                   2
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      26
+    cstartup_M.o                 12
+    data_init.o                  40
+    memchr.o                     24
+    packbits_init_single.o       60
+    strchr.o                     20
+    strlen.o                     16
+    zero_init3.o                 60
+    -------------------------------------------------
+    Total:                      694
+
+shb_l.a: [6]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        32    1 024
+-----------------------------------------------------
+    Grand Total:              9 290      143    1 330
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x080023bc          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x080023dc          --   Gb  - Linker created -
+?main                   0x080023dd         Code  Gb  cmain.o [5]
+ADC_ChannelConfig       0x08001e93   0x18  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Cmd                 0x08001e77   0x1c  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Configurations      0x08001b91   0x3c  Code  Gb  user_config.o [1]
+ADC_GetConversionValue  0x08001ebf    0x6  Code  Gb  stm32f0xx_adc.o [1]
+ADC_GetFlagStatus       0x08001ec5   0x26  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Init                0x08001e49   0x2e  Code  Gb  stm32f0xx_adc.o [1]
+ADC_StartOfConversion   0x08001eb5    0xa  Code  Gb  stm32f0xx_adc.o [1]
+ADC_StopOfConversion    0x08001eab    0xa  Code  Gb  stm32f0xx_adc.o [1]
+APBAHBPrescTable        0x20000000   0x10  Data  Lc  stm32f0xx_rcc.o [1]
+CSTACK$$Base            0x200000e0          --   Gb  - Linker created -
+CSTACK$$Limit           0x200004e0          --   Gb  - Linker created -
+GPIO_Configurations     0x08001a97   0x80  Code  Gb  user_config.o [1]
+GPIO_Init               0x08001be9   0xa0  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_PinAFConfig        0x08001c89   0x5c  Code  Gb  stm32f0xx_gpio.o [1]
+I2C1_ReadBuffer         0x08001843   0xf0  Code  Gb  i2c_user.o [1]
+I2C1_WriteBuffer        0x08001765   0xde  Code  Gb  i2c_user.o [1]
+I2C_ClearFlag           0x08001a55    0x4  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_Cmd                 0x080019bf   0x1c  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_Configurations      0x08001b53   0x3e  Code  Gb  user_config.o [1]
+I2C_GetFlagStatus       0x08001a39   0x1c  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_ITConfig            0x080019db   0x18  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_Init                0x08001959   0x66  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_ReceiveData         0x08001a33    0x6  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_SendData            0x08001a2d    0x6  Code  Gb  stm32f0xx_i2c.o [1]
+I2C_TransferHandling    0x080019f9   0x28  Code  Gb  stm32f0xx_i2c.o [1]
+LoadInt                 0x0800066b   0x68  Code  Lc  xprintflarge_nomb.o [3]
+RCC_AHBPeriphClockCmd   0x080016d9   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB1PeriphClockCmd  0x08001719   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x080016f9   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_Configurations      0x08001a59   0x3e  Code  Gb  user_config.o [1]
+RCC_GetClocksFreq       0x080014d5  0x200  Code  Gb  stm32f0xx_rcc.o [1]
+Region$$Table$$Base     0x080023bc          --   Gb  - Linker created -
+Region$$Table$$Limit    0x080023dc          --   Gb  - Linker created -
+SetSysClock             0x080021a3   0xbe  Code  Lc  system_stm32f0xx.o [1]
+SystemInit              0x08002135   0x6e  Code  Gb  system_stm32f0xx.o [1]
+USART_Cmd               0x08001daf   0x1c  Code  Gb  stm32f0xx_usart.o [1]
+USART_Configurations    0x08001b17   0x3c  Code  Gb  user_config.o [1]
+USART_GetFlagStatus     0x08001e31   0x18  Code  Gb  stm32f0xx_usart.o [1]
+USART_ITConfig          0x08001df1   0x40  Code  Gb  stm32f0xx_usart.o [1]
+USART_Init              0x08001ce5   0xca  Code  Gb  stm32f0xx_usart.o [1]
+USART_SendData          0x08001dd9    0x8  Code  Gb  stm32f0xx_usart.o [1]
+_GenldLargeNoMb         0x08000ae5  0x2c6  Code  Lc  xprintflarge_nomb.o [3]
+_LdtobLargeNoMb         0x080007fd  0x2b0  Code  Lc  xprintflarge_nomb.o [3]
+_LitobLargeNoMb         0x080006d3  0x12a  Code  Lc  xprintflarge_nomb.o [3]
+_Locale_aeabi_lconv     0x200000a0   0x38  Data  Gb  localeconv.o [3]
+_Locale_lconv           0x20000050   0x50  Data  Gb  localeconv.o [3]
+_PrintfLargeNoMb        0x080000c1  0x5aa  Code  Gb  xprintflarge_nomb.o [3]
+_Prout                  0x08002425   0x16  Code  Gb  xprout.o [3]
+_PutcharsLargeNoMb      0x08000dab   0x30  Code  Lc  xprintflarge_nomb.o [3]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20001fff          --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000          --   Gb  command line/config [2]
+__aeabi_cdcmple         0x08000fc1         Code  Gb  DblCmpLe.o [4]
+__aeabi_cfcmpeq         0x08002059         Code  Gb  FltCmpEq.o [4]
+__aeabi_d2f             0x08002079         Code  Gb  DblToFlt.o [4]
+__aeabi_d2uiz           0x08001239         Code  Gb  DblToI32.o [4]
+__aeabi_ddiv            0x08001177         Code  Gb  DblDiv.o [4]
+__aeabi_dmul            0x08000ff3         Code  Gb  DblMul.o [4]
+__aeabi_dsub            0x08001357         Code  Gb  DblAddSub.o [4]
+__aeabi_f2d             0x080020dd         Code  Gb  FltToDbl.o [4]
+__aeabi_i2d             0x08001269         Code  Gb  I32ToDbl.o [4]
+__aeabi_idiv            0x08000f0d         Code  Gb  I32DivModFast.o [5]
+__aeabi_idiv0           0x080014d1         Code  Gb  IntDivZer.o [5]
+__aeabi_idivmod         0x08000f0d         Code  Gb  I32DivModFast.o [5]
+__aeabi_ldiv0           0x080014cd         Code  Gb  I64DivZer.o [5]
+__aeabi_memcpy          0x08000e85         Code  Gb  ABImemcpy.o [5]
+__aeabi_ui2d            0x0800127d         Code  Gb  I32ToDbl.o [4]
+__aeabi_uidiv           0x08000f13         Code  Gb  I32DivModFast.o [5]
+__aeabi_uidivmod        0x08000f13         Code  Gb  I32DivModFast.o [5]
+__aeabi_uldivmod        0x08000e1b         Code  Gb  I64DivMod.o [5]
+__cmain                 0x080023dd         Code  Gb  cmain.o [5]
+__exit                  0x08002411   0x14  Code  Gb  exit.o [6]
+__iar_Locale_lconv_init
+                        0x08001445   0x32  Code  Gb  localeconv.o [3]
+__iar_Memchr            0x08000e03   0x18  Code  Gb  memchr.o [5]
+__iar_Stdout            0x20000010   0x40  Data  Gb  xfiles.o [3]
+__iar_Strchr            0x08000ddf   0x14  Code  Gb  strchr.o [5]
+__iar_d2uiz             0x0800123d         Code  Gb  DblToI32.o [4]
+__iar_data_init3        0x0800234d   0x28  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x080014d3    0x2  Code  Gb  xtls.o [3]
+__iar_packbits_init_single3
+                        0x08002311   0x3c  Code  Gb  packbits_init_single.o [5]
+__iar_program_start     0x0800244d         Code  Gb  cstartup_M.o [5]
+__iar_ui2d              0x08001281         Code  Gb  I32ToDbl.o [4]
+__iar_zero_init3        0x080022d5   0x3c  Code  Gb  zero_init3.o [5]
+__low_level_init        0x080023f7    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f0xx.o [1]
+_call_main              0x080023e9         Code  Gb  cmain.o [5]
+_exit                   0x08002405         Code  Gb  cexit.o [5]
+_main                   0x080023f3         Code  Gb  cmain.o [5]
+digi_0                  0x200000d8    0x1  Data  Gb  main.o [1]
+digi_1                  0x20000538    0x1  Data  Gb  main.o [1]
+div                     0x080014ad   0x20  Code  Gb  div.o [3]
+exit                    0x080023fb    0x8  Code  Gb  exit.o [3]
+ext_digipot_test        0x08001fcd   0x60  Code  Gb  main.o [1]
+fputc                   0x08002399   0x20  Code  Gb  uart_user.o [1]
+i2c_check               0x08001933   0x22  Code  Gb  i2c_user.o [1]
+localeconv              0x08001477   0x18  Code  Gb  localeconv.o [3]
+main                    0x08001ef5   0x92  Code  Gb  main.o [1]
+obuf                    0x200004e0   0x50  Data  Lc  xfiles.o [3]
+printf                  0x08002111   0x24  Code  Gb  printf.o [3]
+putchar                 0x0800243d   0x10  Code  Gb  putchar.o [3]
+readADC1                0x08001fab   0x22  Code  Gb  main.o [1]
+read_adc                0x08001f87   0x24  Code  Gb  main.o [1]
+strlen                  0x08000df3   0x10  Code  Gb  strlen.o [5]
+uhADCxConvertedValue    0x20000530    0x4  Data  Gb  main.o [1]
+uwADCxConvertedVoltage  0x20000534    0x4  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\masta\Documents\Projects\OGH\FRAM\EWARM\Debug\Obj
+[2] = command line
+[3] = dl6M_tlf.a
+[4] = m6M_tl.a
+[5] = rt6M_tl.a
+[6] = shb_l.a
+
+  9 290 bytes of readonly  code memory
+    143 bytes of readonly  data memory
+  1 330 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
