@@ -1,0 +1,297 @@
+###############################################################################
+#
+# IAR ELF Linker V7.60.2.11341/W32 for ARM                21/Feb/2017  15:18:51
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Exe\UART_RX-TX.out
+#    Map file     =  
+#        D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\List\UART_RX-TX.map
+#    Command line =  
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\core_cm3.o" "D:\Cygni\Automation\GOA
+#        RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\main.o" "D:\Cygni\Automation\GOA RS485
+#        Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\misc.o" "D:\Cygni\Automation\GOA RS485
+#        Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\startup_stm32f10x_cl.o"
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\stm32f10x_gpio.o"
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\stm32f10x_it.o"
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\stm32f10x_rcc.o"
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\stm32f10x_usart.o"
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Obj\system_stm32f10x.o" -o
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\Exe\UART_RX-TX.out" --redirect
+#        _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\Debug\List\UART_RX-TX.map" --config
+#        "D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App)
+#        V1-0\UART_RX-TX\EWARM\settings\stm32f10x_flash.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x080fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20017fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A1":                                     0x150
+  .intvec            ro code  0x08000000  0x150  startup_stm32f10x_cl.o [1]
+                            - 0x08000150  0x150
+
+"P1":                                     0xccc
+  .text              ro code  0x08000150  0x240  main.o [1]
+  .text              ro code  0x08000390  0x200  stm32f10x_rcc.o [1]
+  .text              ro code  0x08000590  0x1d4  stm32f10x_gpio.o [1]
+  .text              ro code  0x08000764  0x1f4  stm32f10x_usart.o [1]
+  .text              ro code  0x08000958   0x88  misc.o [1]
+  .text              ro code  0x080009e0  0x1a4  system_stm32f10x.o [1]
+  .text              ro code  0x08000b84   0xd0  stm32f10x_it.o [1]
+  .text              ro code  0x08000c54   0x2c  copy_init3.o [4]
+  .text              ro code  0x08000c80   0x28  data_init.o [4]
+  .iar.init_table    const    0x08000ca8   0x14  - Linker created -
+  .text              ro code  0x08000cbc   0x1a  cmain.o [4]
+  .text              ro code  0x08000cd6    0x4  low_level_init.o [3]
+  .text              ro code  0x08000cda    0x4  exit.o [3]
+  .text              ro code  0x08000ce0    0xa  cexit.o [4]
+  .text              ro code  0x08000cec   0x14  exit.o [5]
+  Initializer bytes  const    0x08000d00   0x18  <for P2-1>
+  .text              ro code  0x08000d18   0x10  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d28    0xc  cstartup_M.o [4]
+  .text              ro code  0x08000d34    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d38    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d3c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d40    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d44    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d48    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d4c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d50    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d54    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d58    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d5c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d60    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d64    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d68    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d6c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d70    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d74    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d78    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d7c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d80    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d84    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d88    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d8c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d90    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d94    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d98    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000d9c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000da0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000da4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000da8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dac    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000db0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000db4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000db8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dbc    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dc0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dc4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dc8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dcc    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dd0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dd4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dd8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000ddc    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000de0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000de4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000de8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dec    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000df0    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000df4    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000df8    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000dfc    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e00    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e04    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e08    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e0c    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e10    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e14    0x4  startup_stm32f10x_cl.o [1]
+  .text              ro code  0x08000e18    0x4  startup_stm32f10x_cl.o [1]
+  .rodata            const    0x08000e1c    0x0  copy_init3.o [4]
+                            - 0x08000e1c  0xccc
+
+"P2", part 1 of 2:                         0x18
+  P2-1                        0x20000000   0x16  <Init block>
+    .data            inited   0x20000000   0x10  stm32f10x_rcc.o [1]
+    .data            inited   0x20000010    0x4  stm32f10x_rcc.o [1]
+    .data            inited   0x20000014    0x2  main.o [1]
+                            - 0x20000016   0x16
+
+"P2", part 2 of 2:                        0x400
+  CSTACK                      0x20000018  0x400  <Block>
+    CSTACK           uninit   0x20000018  0x400  <Block tail>
+                            - 0x20000418  0x400
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x18 (109% of destination):
+          0x08000d00  0x18
+    1 destination range, total size 0x16:
+          0x20000000  0x16
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App) V1-0\UART_RX-TX\EWARM\Debug\Obj: [1]
+    main.o                      576        2        2
+    misc.o                      136
+    startup_stm32f10x_cl.o      584
+    stm32f10x_gpio.o            468
+    stm32f10x_it.o              208
+    stm32f10x_rcc.o             512       20       20
+    stm32f10x_usart.o           500
+    system_stm32f10x.o          420
+    -------------------------------------------------
+    Total:                    3 404       22       22
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [4]
+    cexit.o                      10
+    cmain.o                      26
+    copy_init3.o                 44
+    cstartup_M.o                 12
+    data_init.o                  40
+    -------------------------------------------------
+    Total:                      132
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          4
+    Linker created                        22    1 024
+-----------------------------------------------------
+    Grand Total:              3 568       44    1 046
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08000ca8          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08000cbc          --   Gb  - Linker created -
+?main                   0x08000cbd         Code  Gb  cmain.o [4]
+ADCPrescTable           0x20000010    0x4  Data  Lc  stm32f10x_rcc.o [1]
+APBAHBPrescTable        0x20000000   0x10  Data  Lc  stm32f10x_rcc.o [1]
+BusFault_Handler        0x08000b8b    0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x20000018          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000418          --   Gb  - Linker created -
+Data                    0x20000014    0x2  Data  Gb  main.o [1]
+DebugMon_Handler        0x08000b91    0x2  Code  Gb  stm32f10x_it.o [1]
+GPIO_Configuration      0x08000167   0x62  Code  Gb  main.o [1]
+GPIO_Init               0x08000591  0x136  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_PinRemapConfig     0x080006d3   0x88  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_ResetBits          0x080006cd    0x6  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_SetBits            0x080006c7    0x6  Code  Gb  stm32f10x_gpio.o [1]
+HardFault_Handler       0x08000b87    0x2  Code  Gb  stm32f10x_it.o [1]
+MemManage_Handler       0x08000b89    0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler             0x08000b85    0x2  Code  Gb  stm32f10x_it.o [1]
+NVIC_Configuration      0x08000249   0x54  Code  Gb  main.o [1]
+NVIC_Init               0x08000963   0x68  Code  Gb  misc.o [1]
+NVIC_PriorityGroupConfig
+                        0x08000959    0xa  Code  Gb  misc.o [1]
+PendSV_Handler          0x08000b93    0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_APB1PeriphClockCmd  0x0800054f   0x1e  Code  Gb  stm32f10x_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x08000531   0x1e  Code  Gb  stm32f10x_rcc.o [1]
+RCC_Configuration       0x08000151   0x16  Code  Gb  main.o [1]
+RCC_GetClocksFreq       0x08000391  0x1a0  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base     0x08000ca8          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08000cbc          --   Gb  - Linker created -
+SVC_Handler             0x08000b8f    0x2  Code  Gb  stm32f10x_it.o [1]
+SetSysClock             0x08000a47    0x8  Code  Lc  system_stm32f10x.o [1]
+SetSysClockTo72         0x08000a4f  0x110  Code  Lc  system_stm32f10x.o [1]
+SysTick_Handler         0x08000b95    0x2  Code  Gb  stm32f10x_it.o [1]
+SystemInit              0x080009e1   0x66  Code  Gb  system_stm32f10x.o [1]
+UART4_IRQHandler        0x08000b97   0x38  Code  Gb  stm32f10x_it.o [1]
+UART5_IRQHandler        0x08000bcf   0x38  Code  Gb  stm32f10x_it.o [1]
+USART2_IRQHandler       0x08000c07   0x38  Code  Gb  stm32f10x_it.o [1]
+USART_Cmd               0x08000849   0x1c  Code  Gb  stm32f10x_usart.o [1]
+USART_Configuration     0x080001c9   0x80  Code  Gb  main.o [1]
+USART_GetFlagStatus     0x080008cb   0x1e  Code  Gb  stm32f10x_usart.o [1]
+USART_GetITStatus       0x080008e9   0x70  Code  Gb  stm32f10x_usart.o [1]
+USART_ITConfig          0x08000865   0x56  Code  Gb  stm32f10x_usart.o [1]
+USART_Init              0x08000765   0xde  Code  Gb  stm32f10x_usart.o [1]
+USART_ReceiveData       0x080008c3    0x8  Code  Gb  stm32f10x_usart.o [1]
+USART_SendData          0x080008bb    0x8  Code  Gb  stm32f10x_usart.o [1]
+UsageFault_Handler      0x08000b8d    0x2  Code  Gb  stm32f10x_it.o [1]
+__cmain                 0x08000cbd         Code  Gb  cmain.o [4]
+__exit                  0x08000ced   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3        0x08000c55   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x08000c81   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x08000d29         Code  Gb  cstartup_M.o [4]
+__low_level_init        0x08000cd7    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f10x_cl.o [1]
+_call_main              0x08000cc9         Code  Gb  cmain.o [4]
+_exit                   0x08000ce1         Code  Gb  cexit.o [4]
+_main                   0x08000cd3         Code  Gb  cmain.o [4]
+exit                    0x08000cdb    0x4  Code  Gb  exit.o [3]
+main                    0x0800029d   0xce  Code  Gb  main.o [1]
+
+
+[1] = D:\Cygni\Automation\GOA RS485 Test\UART_RX-TX(Final Test App) V1-0\UART_RX-TX\EWARM\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  3 568 bytes of readonly  code memory
+     44 bytes of readonly  data memory
+  1 046 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

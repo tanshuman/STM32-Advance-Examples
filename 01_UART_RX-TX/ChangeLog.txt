@@ -1,0 +1,42 @@
+----------------------------------------------18-10-2016-------------------------------------------------
+<First Backup>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   <<<< Using U14, UART4 : Trying to send data and read it on the same UART Port >>>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. In assembler file, i.e. startup_stm32f10x_cl.s, updated -> SECTION CSTACK:DATA(3) to SECTION CSTACK:DATA:NOROOT(3) b/c this is old assembler for IAR and does not supported by new assembler.
+2. In CMSIS folder rename -> core_cm3.h to core_cm3.h.old because of same reason.
+3. HSI freq is set to 25000000 as external crystal in XXX is 25Mhz.
+4. Used startup_stm32f10x_cl.s,  because it is a connectivity line of product and this one is the default assembler.
+5. Fourth and Fifth are only UART and does not support USART, therefore declaration of these will be changed to UART4 instead of USART4. But function name will not change. Ex. while(USART_GetFlagStatus(UART4, USART_FLAG_TC) == RESET); // Wait for Empty
+6. <Hardware> Added LED at ****, and Headers at ***, and *** for debugging purpose.
+
+----------------------------------------------19-10-2016-------------------------------------------------
+<Second Backup>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<<< TX4 will send 'K' at some interval and if RX4 will read 'K' it will glow an LED >>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Added Reading Feature (RX).
+2. Need to define RX GPIO separatly as Input floating - GPIO_Mode_IN_FLOATING. (See Point 1 of 20-10-2016)
+***
+5. LED at JP10 blinks if connected in loopback.
+6. If connected with computer, unit will send 'K' letter and if 'K' is sent from computer then LED(JP10) will glow.
+
+----------------------------------------------20-10-2016-------------------------------------------------
+<Third Backup>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<<Using Interrupt to read and respond to the receiving message, Presently using polling method>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Defined RX pin with TX, as GPIO_Mode_AF_PP and it is working.
+2. Changed UART4_Configuration() to USART_Configuration for general use.
+3. Now data is being received by interupt.
+4. If data is received, intrupt will hold the prog for long duration and also turn the LED ON.
+5. If data received is K, then after interupt LED will blink for 25 times.
+>> Variable Data is now set to '0' if Data = 'K' by if condition.
+
+
+
+
+
+
+
+

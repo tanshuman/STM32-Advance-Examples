@@ -1,0 +1,3 @@
+1. UART4 is sending data at test point every second.
+2. Can be tested at test point.
+3. JP10 LED blinking.
