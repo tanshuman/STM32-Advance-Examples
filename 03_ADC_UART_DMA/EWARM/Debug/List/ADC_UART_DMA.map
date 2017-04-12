@@ -1,0 +1,333 @@
+###############################################################################
+#
+# IAR ELF Linker V7.60.2.11341/W32 for ARM                20/Jan/2017  17:15:52
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Exe\ADC_UART_DMA.out
+#    Map file     =  
+#        D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\List\ADC_UART_DMA.map
+#    Command line =  
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\main.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\startup_stm32f0xx.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_adc.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_dma.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_gpio.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_i2c.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_misc.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_rcc.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\stm32f0xx_usart.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\system_stm32f0xx.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\user_adc.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\user_config.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\user_dma.o"
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Obj\user_uart.o" -o
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\Exe\ADC_UART_DMA.out" --map
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM\Debug\List\ADC_UART_DMA.map" --config
+#        "D:\Cygni\Products\Inverterless\Code\V3.0
+#        Compatible\ADC_UART_DMA\EWARM/stm32f0xx_flash.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20001fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                       0xc0
+  .intvec            ro code  0x08000000    0xc0  startup_stm32f0xx.o [1]
+                            - 0x080000c0    0xc0
+
+"P1":                                     0x1119
+  .text              ro code  0x080000c0   0x2b4  stm32f0xx_rcc.o [1]
+  .text              ro code  0x08000374    0xae  I32DivModFast.o [4]
+  .text              ro code  0x08000422     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000424     0x2  IntDivZer.o [4]
+  .text              ro code  0x08000426     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000428   0x1bc  stm32f0xx_gpio.o [1]
+  .text              ro code  0x080005e4   0x1b8  stm32f0xx_dma.o [1]
+  .text              ro code  0x0800079c   0x180  xprintftiny.o [3]
+  .text              ro code  0x0800091c    0x10  strlen.o [4]
+  .text              ro code  0x0800092c   0x178  stm32f0xx_adc.o [1]
+  .text              ro code  0x08000aa4   0x164  system_stm32f0xx.o [1]
+  .text              ro code  0x08000c08   0x124  stm32f0xx_usart.o [1]
+  .text              ro code  0x08000d2c    0xb4  user_adc.o [1]
+  .text              ro code  0x08000de0    0x92  user_config.o [1]
+  .text              ro code  0x08000e72     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000e74    0x6c  main.o [1]
+  .text              ro code  0x08000ee0    0x5c  user_dma.o [1]
+  .text              ro code  0x08000f3c    0x58  user_uart.o [1]
+  .text              ro code  0x08000f94    0x24  printf.o [3]
+  .rodata            const    0x08000fb8    0x40  main.o [1]
+  .text              ro code  0x08000ff8    0x3c  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001034    0x3c  zero_init3.o [4]
+  .text              ro code  0x08001070    0x3c  packbits_init_single.o [4]
+  .text              ro code  0x080010ac    0x28  data_init.o [4]
+  .iar.init_table    const    0x080010d4    0x20  - Linker created -
+  .text              ro code  0x080010f4    0x1a  cmain.o [4]
+  .text              ro code  0x0800110e     0x4  low_level_init.o [3]
+  .text              ro code  0x08001112     0x8  exit.o [3]
+  .text              ro code  0x0800111a     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800111c     0xa  cexit.o [4]
+  .text              ro code  0x08001126     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001128    0x14  exit.o [5]
+  .text              ro code  0x0800113c    0x16  xprout.o [3]
+  .text              ro code  0x08001152     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001154    0x10  putchar.o [3]
+  .text              ro code  0x08001164     0xc  cstartup_M.o [4]
+  .text              ro code  0x08001170     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001172     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001174     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001176     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001178     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800117a     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800117c     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800117e     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001180     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001182     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001184     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001186     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001188     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800118a     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800118c     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800118e     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001190     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001192     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001194     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001196     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08001198     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800119a     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800119c     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800119e     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080011a0     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080011a2     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080011a4     0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080011a6     0x2  startup_stm32f0xx.o [1]
+  .rodata            const    0x080011a8     0x0  zero_init3.o [4]
+  .rodata            const    0x080011a8     0x0  packbits_init_single.o [4]
+  Initializer bytes  const    0x080011a8    0x31  <for P2-1>
+                            - 0x080011d9  0x1119
+
+"P2", part 1 of 3:                          0x50
+  P2-1                        0x20000000    0x50  <Init block>
+    .data            inited   0x20000000    0x10  stm32f0xx_rcc.o [1]
+    .data            inited   0x20000010    0x40  xfiles.o [3]
+                            - 0x20000050    0x50
+
+"P2", part 2 of 3:                         0x400
+  CSTACK                      0x20000050   0x400  <Block>
+    CSTACK           uninit   0x20000050   0x400  <Block tail>
+                            - 0x20000450   0x400
+
+"P2", part 3 of 3:                          0x5c
+  .bss               zero     0x20000450    0x50  xfiles.o [3]
+  .bss               zero     0x200004a0     0xc  user_dma.o [1]
+                            - 0x200004ac    0x5c
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x5c:
+          0x20000450  0x5c
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x31 (61% of destination):
+          0x080011a8  0x31
+    1 destination range, total size 0x50:
+          0x20000000  0x50
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+D:\Cygni\Products\Inverterless\Code\V3.0 Compatible\ADC_UART_DMA\EWARM\Debug\Obj: [1]
+    main.o                      108       64
+    startup_stm32f0xx.o         320
+    stm32f0xx_adc.o             376
+    stm32f0xx_dma.o             440
+    stm32f0xx_gpio.o            444
+    stm32f0xx_rcc.o             692        9       16
+    stm32f0xx_usart.o           292
+    system_stm32f0xx.o          356
+    user_adc.o                  180
+    user_config.o               146
+    user_dma.o                   92                12
+    user_uart.o                  88
+    -------------------------------------------------
+    Total:                    3 534       73       28
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl6M_tlf.a: [3]
+    exit.o                        8
+    low_level_init.o              4
+    printf.o                     36
+    putchar.o                    16
+    xfiles.o                              40      144
+    xprintftiny.o               384
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                      470       40      144
+
+rt6M_tl.a: [4]
+    I32DivModFast.o             174
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      26
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       60
+    strlen.o                     16
+    zero_init3.o                 60
+    -------------------------------------------------
+    Total:                      400
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        32    1 024
+-----------------------------------------------------
+    Grand Total:              4 424      145    1 196
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x080010d4          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x080010f4          --   Gb  - Linker created -
+?main                   0x080010f5         Code  Gb  cmain.o [4]
+ADC_ChannelConfig       0x080009e1   0x18  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Cmd                 0x08000979   0x1c  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Configurations      0x08000d2d   0xa2  Code  Gb  user_adc.o [1]
+ADC_DMACmd              0x08000a3b   0x1c  Code  Gb  stm32f0xx_adc.o [1]
+ADC_DMARequestModeConfig
+                        0x08000a57   0x10  Code  Gb  stm32f0xx_adc.o [1]
+ADC_DeInit              0x0800092d   0x1e  Code  Gb  stm32f0xx_adc.o [1]
+ADC_GetCalibrationFactor
+                        0x080009f9   0x38  Code  Gb  stm32f0xx_adc.o [1]
+ADC_GetFlagStatus       0x08000a67   0x26  Code  Gb  stm32f0xx_adc.o [1]
+ADC_Init                0x0800094b   0x2e  Code  Gb  stm32f0xx_adc.o [1]
+ADC_StartOfConversion   0x08000a31    0xa  Code  Gb  stm32f0xx_adc.o [1]
+ADC_TempSensorCmd       0x08000995   0x26  Code  Gb  stm32f0xx_adc.o [1]
+ADC_VbatCmd             0x080009bb   0x26  Code  Gb  stm32f0xx_adc.o [1]
+APBAHBPrescTable        0x20000000   0x10  Data  Lc  stm32f0xx_rcc.o [1]
+CSTACK$$Base            0x20000050          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000450          --   Gb  - Linker created -
+DMA_Cmd                 0x0800073f   0x1c  Code  Gb  stm32f0xx_dma.o [1]
+DMA_Configurations      0x08000ee1   0x5c  Code  Gb  user_dma.o [1]
+DMA_DeInit              0x080005e5  0x11a  Code  Gb  stm32f0xx_dma.o [1]
+DMA_Init                0x080006ff   0x40  Code  Gb  stm32f0xx_dma.o [1]
+GPIO_Configurations     0x08000e0b   0x68  Code  Gb  user_config.o [1]
+GPIO_DeInit             0x08000429   0xac  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_Init               0x080004d5   0xa0  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_PinAFConfig        0x08000589   0x5c  Code  Gb  stm32f0xx_gpio.o [1]
+RCC_AHBPeriphClockCmd   0x080002c5   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_AHBPeriphResetCmd   0x08000309   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x080002e5   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB2PeriphResetCmd  0x0800032d   0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_Configurations      0x08000de1   0x2a  Code  Gb  user_config.o [1]
+RCC_GetClocksFreq       0x080000c1  0x200  Code  Gb  stm32f0xx_rcc.o [1]
+Region$$Table$$Base     0x080010d4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x080010f4          --   Gb  - Linker created -
+RegularConvData_Tab     0x200004a0    0xc  Data  Gb  user_dma.o [1]
+SetSysClock             0x08000b13   0xbe  Code  Lc  system_stm32f0xx.o [1]
+SystemInit              0x08000aa5   0x6e  Code  Gb  system_stm32f0xx.o [1]
+USART_Cmd               0x08000cd3   0x1c  Code  Gb  stm32f0xx_usart.o [1]
+USART_Configurations    0x08000f3d   0x32  Code  Gb  user_uart.o [1]
+USART_GetFlagStatus     0x08000d15   0x18  Code  Gb  stm32f0xx_usart.o [1]
+USART_Init              0x08000c09   0xca  Code  Gb  stm32f0xx_usart.o [1]
+USART_SendData          0x08000cfd    0x8  Code  Gb  stm32f0xx_usart.o [1]
+_PrintfTiny             0x080007b7  0x166  Code  Gb  xprintftiny.o [3]
+_Prout                  0x0800113d   0x16  Code  Gb  xprout.o [3]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20001fff          --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000          --   Gb  command line/config [2]
+__aeabi_idiv0           0x08000425         Code  Gb  IntDivZer.o [4]
+__aeabi_uidiv           0x08000375         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod        0x08000375         Code  Gb  I32DivModFast.o [4]
+__cmain                 0x080010f5         Code  Gb  cmain.o [4]
+__exit                  0x08001129   0x14  Code  Gb  exit.o [5]
+__iar_Stdout            0x20000010   0x40  Data  Gb  xfiles.o [3]
+__iar_data_init3        0x080010ad   0x28  Code  Gb  data_init.o [4]
+__iar_packbits_init_single3
+                        0x08001071   0x3c  Code  Gb  packbits_init_single.o [4]
+__iar_program_start     0x08001165         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3        0x08001035   0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init        0x0800110f    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f0xx.o [1]
+_call_main              0x08001101         Code  Gb  cmain.o [4]
+_exit                   0x0800111d         Code  Gb  cexit.o [4]
+_main                   0x0800110b         Code  Gb  cmain.o [4]
+exit                    0x08001113    0x8  Code  Gb  exit.o [3]
+fputc                   0x08000f6f   0x20  Code  Gb  user_uart.o [1]
+main                    0x08000e75   0x6c  Code  Gb  main.o [1]
+obuf                    0x20000450   0x50  Data  Lc  xfiles.o [3]
+out                     0x0800079d   0x1a  Code  Lc  xprintftiny.o [3]
+printf                  0x08000f95   0x24  Code  Gb  printf.o [3]
+putchar                 0x08001155   0x10  Code  Gb  putchar.o [3]
+read_adc                0x08000dcf    0xa  Code  Gb  user_adc.o [1]
+strlen                  0x0800091d   0x10  Code  Gb  strlen.o [4]
+
+
+[1] = D:\Cygni\Products\Inverterless\Code\V3.0 Compatible\ADC_UART_DMA\EWARM\Debug\Obj
+[2] = command line
+[3] = dl6M_tlf.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  4 424 bytes of readonly  code memory
+    145 bytes of readonly  data memory
+  1 196 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
